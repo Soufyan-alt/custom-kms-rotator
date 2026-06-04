@@ -4,7 +4,7 @@ This security document outlines the technical risks associated with encryption k
 
 ---
 
-## 🛑 1. The Cryptographic Risk: Key Stagnation & Exposure (ما هي الثغرة أو المشكلة الأمنية؟)
+## 🛑 1. The Cryptographic Risk: Key Stagnation & Exposure 
 
 ### The Architectural Problem
 When applications encrypt sensitive corporate payloads (such as credit cards, PII, or access credentials) using a static encryption key, they create a high-value attack surface. If an adversary compromises the infrastructure or extracts a database backup, having a single static key means all historical, current, and future data is permanently compromised. 
@@ -14,7 +14,7 @@ Leaving encryption keys unchanged for extended periods violates major compliance
 
 ---
 
-## 🔍 2. Automated Detection: Key Lifecycle Auditing (كيف تم اكتشافها آلياً؟)
+## 🔍 2. Automated Detection: Key Lifecycle Auditing 
 
 To guarantee that encryption keys do not exceed their maximum safe operational lifespan, the architecture utilizes automated temporal tracking and cryptographic event monitoring:
 
@@ -24,7 +24,7 @@ To guarantee that encryption keys do not exceed their maximum safe operational l
 
 ---
 
-## 🛠️ 3. Root Remediation: Zero-Downtime Rotation & Rewrapping (كيف تم إصلاحها؟)
+## 🛠️ 3. Root Remediation: Zero-Downtime Rotation & Rewrapping 
 
 The risk of key compromise was eliminated by implementing an automated **Key Lifecycle Management** pipeline designed to enforce rotation with zero service disruption:
 
